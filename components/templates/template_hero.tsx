@@ -1,7 +1,7 @@
 'use client';
 
-import { baseUrl } from "@/constants/urls";
-import { PlusCircle } from "@phosphor-icons/react";
+import { baseUrl } from "@/constants/client/url";
+import { PlusCircleIcon } from "@phosphor-icons/react";
 import { Heading, Text, Container, Flex, Box, Strong } from "@radix-ui/themes";
 import Link from "next/link";
 
@@ -28,7 +28,7 @@ export default function CreateHero() {
 								className="w-full h-full bg-black bg-opacity-25 group-hover:bg-opacity-0 transition-all duration-300"
 							>
 								<span className="flex flex-col items-center" >
-									<PlusCircle size={56} weight="duotone" /><Strong>New Customer</Strong>
+									<PlusCircleIcon size={56} weight="duotone" /><Strong>New Customer</Strong>
 								</span>
 							</Flex>
 						</Box>
@@ -41,7 +41,7 @@ export default function CreateHero() {
 								className="w-full h-full bg-black bg-opacity-25 group-hover:bg-opacity-0 transition-all duration-300"
 							>
 								<span className="flex flex-col items-center" >
-									<PlusCircle size={56} weight="duotone" /><Strong>New Invoice</Strong>
+									<PlusCircleIcon size={56} weight="duotone" /><Strong>New Invoice</Strong>
 								</span>
 							</Flex>
 						</Box>
@@ -54,7 +54,7 @@ export default function CreateHero() {
 								className="w-full h-full bg-black bg-opacity-25 group-hover:bg-opacity-0 transition-all duration-300"
 							>
 								<span className="flex flex-col items-center" >
-									<PlusCircle size={56} weight="duotone" /><Strong>New Receipt</Strong>
+									<PlusCircleIcon size={56} weight="duotone" /><Strong>New Receipt</Strong>
 								</span>
 							</Flex>
 						</Box>
