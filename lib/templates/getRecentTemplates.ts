@@ -1,7 +1,7 @@
 'use server';
 
 import { Template } from "@/types/templates";
-import { baseUrl } from "@/constants/urls";
+import {useBaseUrl} from "@/constants/client/url";
 import { timeStamp } from "@/constants/date";
 import { Response } from "@/types/response";
 import { errResponse } from "@/constants/responses";
@@ -12,6 +12,7 @@ import { errResponse } from "@/constants/responses";
 
 
 export default async function getRecentTemplates(): Promise<Response<null> | Response<Template[]>> {
+	const baseUrl = useBaseUrl();
 	// Add timestamp to prevent caching
 	const apiUrl = `${baseUrl}/api/get_recents?t=${timeStamp}`;
 
@@ -23,7 +24,7 @@ export default async function getRecentTemplates(): Promise<Response<null> | Res
 				'Content-Type': 'application/json',
 				'Cache-Control': 'no-cache, no-store, must-revalidate',
 				'Pragma': 'no-cache',
-				'Ex	pires': '0'
+				'Expires': '0'
 			}
 		});
 

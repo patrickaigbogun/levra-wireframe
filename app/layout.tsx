@@ -3,7 +3,7 @@ import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
 import { ThemeProvider } from 'next-themes';
 import "./globals.css";
-import Header from "@/components/ui/layout/header";
+import Header from "@/components/ui/dashboard/header";
 import ToastProvider from "@/components/providers/toast_provider";
 
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body
 				className={` antialiased text-white p-0 m-0 font-bold `}
 			>

@@ -1,15 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { Article, CashRegister, ClockCounterClockwise, DotsThreeCircle } from "@phosphor-icons/react";
+import { ArticleIcon, CashRegisterIcon, ClockCounterClockwiseIcon, DotsThreeCircleIcon } from "@phosphor-icons/react";
 import Logo from "../../header_logo";
 import { Button, Flex } from "@radix-ui/themes";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { House } from "@phosphor-icons/react/dist/ssr";
-import { baseUrl } from "@/constants/urls";
+import { HouseIcon } from "@phosphor-icons/react";
+import { useBaseUrl } from "@/constants/client/url";
 
 export default function Drawer() {
 	const [isOpen, setIsOpen] = useState(false);
+
+	const baseUrl = useBaseUrl();
+	console.log(baseUrl)
+
 
 	const toggleDrawer = () => {
 		setIsOpen(!isOpen);
@@ -23,7 +27,7 @@ export default function Drawer() {
 				onClick={toggleDrawer}
 				aria-label="Open menu"
 			>
-				<DotsThreeCircle size={32} />
+				<DotsThreeCircleIcon size={32} />
 			</button>
 
 			{/* Drawer */}
@@ -38,7 +42,7 @@ export default function Drawer() {
 						aria-label="Close menu"
 						className="p-2 text-white"
 					>
-						<DotsThreeCircle size={32} />
+						<DotsThreeCircleIcon size={32} />
 					</button>
 				</Flex>
 
@@ -51,7 +55,7 @@ export default function Drawer() {
 								className="block px-4 py-2  "
 							>
 								<Button color="gray" variant="ghost" highContrast radius='full' size={'3'}>
-									<House size={24} />Home
+									<HouseIcon size={24} />Home
 								</Button>
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>
@@ -61,7 +65,7 @@ export default function Drawer() {
 								className="block px-4 py-2"
 							>
 								<Button color="gray" variant="ghost" highContrast radius='full' size={'3'}>
-								<Article size={24} />Template
+								<ArticleIcon size={24} />Template
 								</Button>
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>
@@ -71,7 +75,7 @@ export default function Drawer() {
 								className="block px-4 py-2 "
 							>
 								<Button color="gray" variant="ghost" highContrast radius='full' size={'3'}>
-								<CashRegister size={24} />Transactions
+								<CashRegisterIcon size={24} />Transactions
 								</Button>
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>
@@ -81,7 +85,7 @@ export default function Drawer() {
 								className="block px-4 py-2 "
 							>
 								<Button color="gray" variant="ghost" highContrast radius='full' size={'3'}>
-								<ClockCounterClockwise size={24} />History
+								<ClockCounterClockwiseIcon size={24} />History
 								</Button>
 							</NavigationMenu.Link>
 						</NavigationMenu.Item>

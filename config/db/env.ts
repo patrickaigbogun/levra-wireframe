@@ -1,9 +1,9 @@
-import { getEnv } from "@/config/env";
+import { getServerEnv } from "@/config/env";
 
 
 
 
 export const dbKeys = {
-    url: getEnv("DB_URL_REL") as string
+    url: getServerEnv('DB_URL_RELATIVE')
 };
 

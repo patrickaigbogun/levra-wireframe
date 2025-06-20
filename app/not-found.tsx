@@ -1,11 +1,12 @@
 'use client';
 
-import { baseUrl } from "@/constants/client/url";
+import { useBaseUrl } from "@/constants/client/url";
 import { HouseIcon, WarningCircleIcon } from "@phosphor-icons/react";
 import { Heading, Text, Container, Flex, Button, Strong, IconButton } from "@radix-ui/themes";
 import Link from 'next/link';
 
 export default function NotFound() {
+	const baseUrl = useBaseUrl()
 	return (
 		<Container className="100vh py-5">
 			<Flex direction="column" align="center" justify="center" gap="6" className="h-full">

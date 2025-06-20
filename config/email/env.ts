@@ -1,7 +1,7 @@
-import { getEnv } from "@/config/env";
+import { getServerEnv } from "@/config/env";
 
 
 export const emailKeys = {
-	apiKey: getEnv("EMAIL_KEY")
+	apiKey: getServerEnv("EMAIL_KEY")
 };
 

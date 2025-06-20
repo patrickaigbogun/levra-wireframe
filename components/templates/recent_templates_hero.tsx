@@ -3,10 +3,11 @@
 'use client';
 
 import { Flex, Heading, Link, Box, Callout } from "@radix-ui/themes";
-import { baseUrl } from "@/constants/client/url";
+import { useBaseUrl } from "@/constants/client/url";
 import { ArrowSquareOutIcon, InfoIcon } from "@phosphor-icons/react";
 
 export default function RecentTemplatesHero() {
+	const baseUrl = useBaseUrl()
 
 	return (
 		<Flex direction="column" gap="8">

@@ -1,11 +1,12 @@
 'use client';
 
-import { baseUrl } from "@/constants/client/url";
+import { useBaseUrl } from "@/constants/client/url";
 import { PlusCircleIcon } from "@phosphor-icons/react";
 import { Heading, Text, Container, Flex, Box, Strong } from "@radix-ui/themes";
 import Link from "next/link";
 
 export default function CreateHero() {
+	const baseUrl = useBaseUrl()
 	return (
 		<Container>
 			<Flex direction="column" gap="6">
